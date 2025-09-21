@@ -9,9 +9,7 @@ build:
       - npm run build
 
 run:
-  command:
-    - sh
-    - -c
-    - npx prisma migrate deploy && node dist/main.js
+  command: >-
+    sh -c 'npx prisma migrate deploy && node dist/main.js'
   network:
     port: 3001
